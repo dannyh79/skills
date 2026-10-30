@@ -1,0 +1,3 @@
+interface:
+  display_name: "Revive Hermes"
+  short_description: "Repair Hermes gateway and Telegram connectivity"
