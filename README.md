@@ -7,6 +7,7 @@ A personal registry of reusable agent skills maintained by [dannyh79](https://gi
 | [revive-hermes](revive-hermes/SKILL.md) | Diagnose and restore a local Hermes Agent gateway and Telegram connectivity. | Created from a verified macOS recovery workflow. |
 | [ponytail](ponytail/SKILL.md) | Favor simple, minimal solutions when writing and reviewing code. | Unmodified skill from [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail), npm package `@dietrichgebert/ponytail` version 4.9.0. |
 | [node-bump-deps](node-bump-deps/SKILL.md) | Upgrade Node.js and its types, with other dependency upgrades in a stacked PR. | Created from a verified Node.js upgrade workflow. |
+| [python-bump-deps](python-bump-deps/SKILL.md) | Upgrade Python securely with uv or pip and stack dependency upgrades separately. | Adapted from the Node.js upgrade workflow. |
 
 ## Install for Codex
 
@@ -15,10 +16,10 @@ Clone the registry and copy the desired skill directories into your skills direc
 ```sh
 gh repo clone dannyh79/skills
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R skills/revive-hermes skills/ponytail skills/node-bump-deps "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R skills/revive-hermes skills/ponytail skills/node-bump-deps skills/python-bump-deps "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-If a destination already exists, compare or back it up before copying. Start a new Codex session to discover installed skills, then invoke `$revive-hermes`, `$ponytail`, or `$node-bump-deps`.
+If a destination already exists, compare or back it up before copying. Start a new Codex session to discover installed skills, then invoke `$revive-hermes`, `$ponytail`, `$node-bump-deps`, or `$python-bump-deps`.
 
 Each skill lives in a directory with a `SKILL.md` entry point. Referenced resources travel with that directory. Ponytail here contains the standalone skill, not the upstream plugin's hooks, extensions, or companion skills.
 
